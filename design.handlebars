@@ -31,12 +31,22 @@
 		<style type="text/css" id="thumb_location"> </style>
 		<style type="text/css" id="snap_to"> </style>
 		<style type="text/css" id="thumb_scale"> </style>
-
 		<script src="{{ site.files.[montessori_data.js] }}"></script>
 
 	</head>
 	<body data-bodyview="{{ route.body_view }}">
 		{{{ site.custom_html }}}
+		{{! Custom Landing Page}}
+		<div class="landing-page-container">
+			<div id="landing-logo-container">
+				<img class="landing-logo" src="{{ site.header_url }}" />
+				<img class="tiger-bg" src="http://payload521.cargocollective.com/1/23/745253/12739551/unnamed.png" />
+			</div>
+			<h3 class="tagline">
+				<span id="pop-culture">Pop Culture... </span>
+				<span id="fashionably-late">Fashionably Late</span>
+			<h3>
+		</div>
 
 		{{! Saving indicator for the project thumbnails' positions}}
 		<div class="loading" id="thumb_position_loader">{{>loading_animation}}</div>
@@ -64,6 +74,11 @@
 		{{! Navigation }}
 		<div id="header_spacer" style="visibility: hidden; z-index: -1; position: relative;"></div>
 		<div class="site_header" id="item_site_header" data-id="site_header">
+			<button class="hamburger hamburger--spring" type="button">
+			  <span class="hamburger-box">
+			    <span class="hamburger-inner"></span>
+			  </span>
+			</button>
 			<div class="site_header_inner">
 
 
@@ -136,7 +151,10 @@
 				</div>
 
 			{{/if}}
+		</div>
 
+		<div class="custom-nav">
+			Wow Cool!
 		</div>
 
 
@@ -329,5 +347,6 @@
 		</div>
 	{{/if}}
 
+	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 	</body>
 </html>
